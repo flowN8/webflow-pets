@@ -2,7 +2,7 @@
 
 Add more cats to your Webflow Designer experience, for fun and productivity! ₍^. .^₎⟆
 
-![Screenshot of Webflow Pets extension](https://file%2B.vscode-resource.vscode-cdn.net/Users/admin/Documents/code/webflow-pets/preview.gif?version%3D1758046910815)
+![Screenshot of Webflow Pets extension](./preview.gif)
 
 
 Inspired by [Tamagotchi](https://en.wikipedia.org/wiki/Tamagotchi) and [vscode-pets](https://github.com/tonybaloney/vscode-pets).
