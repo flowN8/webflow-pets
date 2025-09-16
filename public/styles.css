@@ -1,0 +1,461 @@
+*, 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  --box-shadows-0: 0 0px 0px 0;
+  --box-shadows-1: 0 1px 3px -1px rgba(0, 0, 0, 0.4);
+  --box-shadows-2: 0 0.5px 2px -1px rgba(0, 0, 0, 0.34),0 3px 6px -2px rgba(0, 0, 0, 0.36);
+  --box-shadows-3: 0 1px 3px -1px rgba(0, 0, 0, 0.34),0 5px 10px -2px rgba(0, 0, 0, 0.32);
+  --box-shadows-4: 0 1.5px 4px -1px rgba(0, 0, 0, 0.34),0 8px 20px -3px rgba(0, 0, 0, 0.28);
+  --box-shadows-5: 0 1.5px 4px -1px rgba(0, 0, 0, 0.3),0 10px 35px -4px rgba(0, 0, 0, 0.25);
+  --box-shadows-action-colored: 0px 0.5px 1px 0px rgba(0, 0, 0, 0.8),0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.20) inset;
+  --box-shadows-action-secondary: 0px 0.5px 1px rgba(0, 0, 0, 0.8),inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.12);
+  --box-shadows-input-inner: 0px 1px 1px -1px rgba(0, 0, 0, 0.13) inset,0px 3px 3px -3px rgba(0, 0, 0, 0.17) inset,0px 4px 4px -4px rgba(0, 0, 0, 0.17) inset,0px 8px 8px -8px rgba(0, 0, 0, 0.17) inset,0px 12px 12px -12px rgba(0, 0, 0, 0.13) inset,0px 16px 16px -16px rgba(0, 0, 0, 0.13) inset;
+  --box-shadows-menu: 0px 12px 24px 8px rgba(0, 0, 0, 0.08),0px 8px 16px 4px rgba(0, 0, 0, 0.08),0px 4px 8px 2px rgba(0, 0, 0, 0.08),0px 2px 6px 0px rgba(0, 0, 0, 0.08),0px -0.5px 0.5px 0px rgba(0, 0, 0, 0.12) inset,0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.12) inset;
+  --box-shadows-searchable-list: 0px -1px 0px 0px rgba(255, 255, 255, .13);
+  --box-shadows-ui-number-input-default-button-active: inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.12);
+  --box-shadows-ui-number-input-default-button-inactive: 0px 0.5px 1px rgba(0, 0, 0, 0.8),inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.12);
+  --box-shadows-ui-number-input-stepper: 0px 0.5px 1px 0px rgba(0, 0, 0, 0.80),0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.12) inset;
+  --box-shadows-ui-select: 0px 0.5px 1px rgba(0, 0, 0, 0.8),inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.12);
+  --colors-action-black-ghost-background-hover: var(--wf-system---black-a-10);
+  --colors-action-black-ghost-background-selected: var(--wf-system---black-a-19);
+  --colors-action-primary-background: var(--wf-system---blue-300);
+  --colors-action-primary-background-hover: var(--wf-system---blue-200);
+  --colors-action-primary-text: var(--wf-system---white);
+  --colors-action-primary-text-hover: var(--wf-system---white);
+  --colors-action-secondary-background: linear-gradient(180deg, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.11) 100%);
+  --colors-action-secondary-background-hover: linear-gradient(180deg, rgba(255, 255, 255, 0.19) 0%, rgba(255, 255, 255, 0.17) 100%);
+  --colors-action-secondary-background-pressed: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.1) 100%);
+  --colors-action-secondary-selected-background: var(--wf-system---black-a-50);
+  --colors-action-secondary-selected-background-pressed: var(--wf-system---black-a-50);
+  --colors-action-secondary-text: var(--wf-system---white);
+  --colors-action-secondary-text-hover: var(--wf-system---white);
+  --colors-action-secondary-border: var(--wf-system---white-a-13);
+  --colors-action-secondary-border-hover: var(--wf-system---white-a-22);
+  --colors-action-white-ghost-background-hover: var(--wf-system---white-a-7);
+  --colors-action-white-ghost-background-selected: var(--wf-system---white-a-10);
+  --colors-action-white-outline-background-selected: var(--wf-system---white-a-10);
+  --colors-action-white-outline-border: var(--wf-system---white-a-13);
+  --colors-action-white-outline-border-hover: var(--wf-system---white-a-22);
+  --colors-action-white-solid-background-hover: var(--wf-system---gray-300);
+  --colors-background-primary: var(--wf-system---gray-1100);
+  --colors-background-primary-disabled: var(--wf-system---gray-900);
+  --colors-background-secondary: var(--wf-system---gray-1000);
+  --colors-background-tertiary: var(--wf-system---gray-800);
+  --colors-background-raised: var(--wf-system---white-a-7);
+  --colors-background-1: var(--wf-system---gray-1100);
+  --colors-background-2: var(--wf-system---gray-1000);
+  --colors-background-3: var(--wf-system---gray-800);
+  --colors-background-4: var(--wf-system---gray-900);
+  --colors-background-5: var(--wf-system---gray-800);
+  --colors-background-inactive: var(--wf-system---gray-1100);
+  --colors-background-inverse: var(--wf-system---gray-100);
+  --colors-background-inverse-hover: var(--wf-system---gray-100);
+  --colors-blue-background: var(--wf-system---blue-300);
+  --colors-blue-background-disabled: var(--wf-system---blue-700);
+  --colors-blue-background-hover: var(--wf-system---blue-200);
+  --colors-blue-background-pressed: var(--wf-system---blue-300);
+  --colors-blue-border: var(--wf-system---blue-400);
+  --colors-blue-canvas: var(--wf-system---blue-400);
+  --colors-blue-canvas-transparent: var(--wf-system---blue-a-10);
+  --colors-blue-chart: var(--wf-system---blue-400);
+  --colors-blue-chart-2: var(--wf-system---blue-100);
+  --colors-blue-icon: var(--wf-system---blue-100);
+  --colors-blue-outline: 0 0 0 2px var(--wf-system---d1-blue-a-20);
+  --colors-blue-text: var(--wf-system---blue-100);
+  --colors-blue-transparent: var(--wf-system---blue-a-25);
+  --colors-blue-transparent-hover: var(--wf-system---blue-a-35);
+  --colors-border-default: var(--wf-system---white-a-13);
+  --colors-border-text-input: var(--wf-system---white-a-16);
+  --colors-border-checkbox-radio: var(--wf-system---white-a-19);
+  --colors-border-1: var(--wf-system---white-a-13);
+  --colors-border-2: var(--wf-system---white-a-16);
+  --colors-border-3: var(--wf-system---white-a-19);
+  --colors-border-4: var(--wf-system---white-a-19);
+  --colors-close-button-background: var(--wf-system---white-a-10);
+  --colors-gray-icon: var(--wf-system---gray-400);
+  --colors-gray-transparent: var(--wf-system---white-a-19);
+  --colors-gray-background: var(--wf-system---gray-700);
+  --colors-gray-background-hover: var(--wf-system---gray-700);
+  --colors-gray-background-pressed: var(--wf-system---gray-700);
+  --colors-gray-chart: var(--wf-system---gray-500);
+  --colors-gray-canvas: var(--wf-system---gray-600);
+  --colors-gray-canvas-hover: var(--wf-system---gray-700);
+  --colors-gray-canvas-transparent: var(--wf-system---white-a-10);
+  --colors-gray-background-transparent: var(--wf-system---white-a-19);
+  --colors-gray-background-transparent-hover: var(--wf-system---white-a-22);
+  --colors-gray-background-disabled: var(--wf-system---gray-900);
+  --colors-green-background: var(--wf-system---green-300);
+  --colors-green-background-disabled: var(--wf-system---green-700);
+  --colors-green-background-hover: var(--wf-system---green-200);
+  --colors-green-background-pressed: var(--wf-system---green-300);
+  --colors-green-border: var(--wf-system---green-400);
+  --colors-green-canvas: var(--wf-system---green-400);
+  --colors-green-canvas-transparent: var(--wf-system---green-a-10);
+  --colors-green-chart: var(--wf-system---green-100);
+  --colors-green-icon: var(--wf-system---green-100);
+  --colors-green-outline: 0 0 0 2px var(--wf-system---d1-green-a-20);
+  --colors-green-text: var(--wf-system---green-100);
+  --colors-green-transparent: var(--wf-system---green-a-25);
+  --colors-green-transparent-hover: var(--wf-system---green-a-35);
+  --colors-orange-background: var(--wf-system---orange-300);
+  --colors-orange-background-disabled: var(--wf-system---orange-700);
+  --colors-orange-background-hover: var(--wf-system---orange-200);
+  --colors-orange-background-pressed: var(--wf-system---orange-300);
+  --colors-orange-border: var(--wf-system---orange-400);
+  --colors-orange-canvas: var(--wf-system---orange-400);
+  --colors-orange-canvas-transparent: var(--wf-system---orange-a-10);
+  --colors-orange-chart: var(--wf-system---orange-400);
+  --colors-orange-icon: var(--wf-system---orange-100);
+  --colors-orange-text: var(--wf-system---orange-100);
+  --colors-orange-transparent: var(--wf-system---orange-a-20);
+  --colors-orange-transparent-hover: var(--wf-system---orange-a-30);
+  --colors-pink-background: var(--wf-system---pink-300);
+  --colors-pink-background-disabled: var(--wf-system---pink-700);
+  --colors-pink-background-hover: var(--wf-system---pink-200);
+  --colors-pink-background-pressed: var(--wf-system---pink-300);
+  --colors-pink-border: var(--wf-system---pink-400);
+  --colors-pink-canvas: var(--wf-system---pink-400);
+  --colors-pink-canvas-transparent: var(--wf-system---pink-a-10);
+  --colors-pink-chart: var(--wf-system---pink-400);
+  --colors-pink-icon: var(--wf-system---pink-100);
+  --colors-pink-outline: 0 0 0 2px var(--wf-system---d1-pink-a-20);
+  --colors-pink-text: var(--wf-system---pink-100);
+  --colors-pink-transparent: var(--wf-system---pink-a-25);
+  --colors-pink-transparent-hover: var(--wf-system---pink-a-35);
+  --colors-presence-disabled-blue: #316972;
+  --colors-presence-disabled-green: #516A39;
+  --colors-presence-disabled-orange: #754C2E;
+  --colors-presence-disabled-pink: #6E365E;
+  --colors-presence-disabled-red: #6E3638;
+  --colors-presence-disabled-yellow: #75692E;
+  --colors-presence-canvas-blue: #0096B180;
+  --colors-presence-canvas-green: #5A9A1B80;
+  --colors-presence-canvas-orange: #D45E0B80;
+  --colors-presence-canvas-pink: #DE2CAD80;
+  --colors-presence-canvas-red: #EF313D80;
+  --colors-presence-canvas-yellow: #A0830080;
+  --colors-presence-outline-blue: #8DD9E7;
+  --colors-presence-outline-green: #B3F076;
+  --colors-presence-outline-orange: var(--wf-system---orange-100);
+  --colors-presence-outline-pink: var(--wf-system---pink-100);
+  --colors-presence-outline-red: var(--wf-system---red-100);
+  --colors-presence-outline-yellow: #FFE372;
+  --colors-presence-primary-blue: #8DD9E7;
+  --colors-presence-primary-green: #B3F076;
+  --colors-presence-primary-orange: var(--wf-system---orange-100);
+  --colors-presence-primary-pink: var(--wf-system---pink-100);
+  --colors-presence-primary-red: var(--wf-system---red-100);
+  --colors-presence-primary-yellow: #FFE372;
+  --colors-presence-secondary-blue: #00B8D933;
+  --colors-presence-secondary-green: #80D72833;
+  --colors-presence-secondary-orange: var(--wf-system---orange-a-25);
+  --colors-presence-secondary-pink: var(--wf-system---pink-a-25);
+  --colors-presence-secondary-red: var(--wf-system---red-a-25);
+  --colors-presence-secondary-yellow: var(--wf-system---yellow-a-20);
+  --colors-purple-background: var(--wf-system---purple-300);
+  --colors-purple-background-disabled: var(--wf-system---purple-700);
+  --colors-purple-background-hover: var(--wf-system---purple-200);
+  --colors-purple-background-pressed: var(--wf-system---purple-300);
+  --colors-purple-border: var(--wf-system---purple-400);
+  --colors-purple-canvas: var(--wf-system---purple-400);
+  --colors-purple-canvas-transparent: var(--wf-system---purple-a-10);
+  --colors-purple-chart: var(--wf-system---purple-400);
+  --colors-purple-chart-2: var(--wf-system---purple-100);
+  --colors-purple-icon: var(--wf-system---purple-100);
+  --colors-purple-outline: 0 0 0 2px var(--wf-system---d1-purple-a-20);
+  --colors-purple-text: var(--wf-system---purple-100);
+  --colors-purple-transparent: var(--wf-system---purple-a-25);
+  --colors-purple-transparent-hover: var(--wf-system---purple-a-35);
+  --colors-red-background: var(--wf-system---red-300);
+  --colors-red-background-disabled: var(--wf-system---red-700);
+  --colors-red-background-hover: var(--wf-system---red-200);
+  --colors-red-background-pressed: var(--wf-system---red-300);
+  --colors-red-border: var(--wf-system---red-400);
+  --colors-red-canvas: var(--wf-system---red-400);
+  --colors-red-canvas-transparent: var(--wf-system---red-a-10);
+  --colors-red-chart: var(--wf-system---red-100);
+  --colors-red-icon: var(--wf-system---red-100);
+  --colors-red-outline: 0 0 0 2px var(--wf-system---d1-red-a-20);
+  --colors-red-text: var(--wf-system---red-100);
+  --colors-red-transparent: var(--wf-system---red-a-25);
+  --colors-red-transparent-hover: var(--wf-system---red-a-35);
+  --colors-skeleton: var(--wf-system---white-a-7);
+  --colors-text-black-primary: var(--wf-system---black);
+  --colors-text-black-secondary: var(--wf-system---black-a-60);
+  --colors-text-dimmed: var(--wf-system---white-a-50);
+  --colors-text-inverse: var(--wf-system---black);
+  --colors-text-primary: var(--wf-system---white);
+  --colors-text-secondary: var(--wf-system---white-a-67);
+  --colors-text-white-primary: var(--wf-system---white);
+  --colors-text-white-secondary: var(--wf-system---white-a-67);
+  --colors-ui-autocomplete-list-box-background: var(--wf-system---gray-800);
+  --colors-ui-avatar-colored-text-disabled: var(--wf-system---white-a-40);
+  --colors-ui-avatar-default-text-disabled: var(--wf-system---white-a-40);
+  --colors-ui-avatar-shadow: var(--wf-system---white-a-10);
+  --colors-ui-background-active: var(--wf-system---white-a-10);
+  --colors-ui-background-hover: var(--wf-system---white-a-7);
+  --colors-ui-badge-background: var(--wf-system---gray-100);
+  --colors-ui-badge-background-hover: var(--wf-system---gray-300);
+  --colors-ui-badge-background-pressed: var(--wf-system---gray-100);
+  --colors-ui-black-ghost-border: var(--wf-system---black-a-19);
+  --colors-ui-black-ghost-border-hover: var(--wf-system---black-a-30);
+  --colors-ui-border-solid: #464646;
+  --colors-ui-card-background: var(--wf-system---white-a-7);
+  --colors-ui-canvas-background: var(--wf-system---gray-800);
+  --colors-ui-checkbox-radio-border-color: var(--wf-system---white-a-19);
+  --colors-ui-drag-overlay-background: var(--wf-system---gray-800);
+  --colors-ui-input-background: var(--wf-system---black-a-22);
+  --colors-ui-input-border-color: var(--wf-system---white-a-16);
+  --colors-ui-input-border-color-hover: var(--wf-system---white-a-19);
+  --colors-ui-menu-content-background: var(--wf-system---gray-800);
+  --colors-ui-menu-divider: var(--wf-system---white-a-13);
+  --colors-ui-modal-backdrop: var(--wf-system---black-a-70);
+  --colors-ui-number-input-button-icon-hover-color: linear-gradient(180deg, rgba(255, 255, 255, 0.19) 0%, rgba(255, 255, 255, 0.17) 100%);
+  --colors-ui-number-input-stepper-border: none;
+  --colors-ui-number-input-stepper-input-border: var(--wf-system---white-a-16);
+  --colors-ui-number-input-value-wrapper-outline: none;
+  --colors-ui-number-input-value-wrapper-outline-hover: none;
+  --colors-ui-popover-backdrop: var(--wf-system---black-a-50);
+  --colors-ui-segmented-control-active: var(--wf-system---black-a-50);
+  --colors-ui-select-background: linear-gradient(180deg, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.11) 100%);
+  --colors-ui-select-background-hover: linear-gradient(180deg, rgba(255, 255, 255, 0.19) 0%, rgba(255, 255, 255, 0.17) 100%);
+  --colors-ui-select-border: none;
+  --colors-ui-scrollbar-thumb: var(--wf-system---white-a-30);
+  --colors-ui-scrollbar-thumb-hover: var(--wf-system---white-a-40);
+  --colors-ui-table-zebra-stripe-background: rgba(255, 255, 255, 0.02);
+  --colors-yellow-background: var(--wf-system---yellow-400);
+  --colors-yellow-background-disabled: var(--wf-system---yellow-700);
+  --colors-yellow-background-hover: var(--wf-system---yellow-100);
+  --colors-yellow-background-pressed: var(--wf-system---yellow-400);
+  --colors-yellow-border: var(--wf-system---yellow-400);
+  --colors-yellow-canvas: var(--wf-system---yellow-400);
+  --colors-yellow-canvas-transparent: var(--wf-system---yellow-a-10);
+  --colors-yellow-chart: var(--wf-system---yellow-400);
+  --colors-yellow-icon: var(--wf-system---yellow-400);
+  --colors-yellow-outline: 0 0 0 2px var(--wf-system---d1-yellow-a-20);
+  --colors-yellow-text: var(--wf-system---yellow-400);
+  --colors-yellow-transparent: var(--wf-system---yellow-a-15);
+  --colors-yellow-transparent-hover: var(--wf-system---yellow-a-25);
+  --controls-height-large: 32px;
+  --controls-height-medium: 24px;
+  --controls-height-x-large: 40px;
+  --controls-border-radius: 2px;
+  --controls-border-width: 1px;
+  --controls-font-size-large: var(--wf-system---typography-font-size-body);
+  --controls-font-size-medium: var(--wf-system---typography-font-size-body);
+  --controls-font-size-x-large: var(--wf-system---typography-font-size-body);
+  --controls-gutter-large: 12px;
+  --controls-gutter-medium: 8px;
+  --controls-gutter-x-large: 12px;
+  --controls-line-height-large: calc(32px - 1px * 2);
+  --controls-line-height-medium: calc(24px - 1px * 2);
+  --controls-line-height-x-large: calc(40px - 1px * 2);
+  --controls-opacity-disabled: var(--opacities-disabled);
+  --opacities-default: 1;
+  --opacities-low: 0.8;
+  --opacities-minimum: 0.7;
+  --opacities-disabled: 0.4;
+  --box-shadows-segmented-control: inset 0px 16px 16px -16px rgba(0, 0, 0, 0.2),inset 0px 12px 12px -12px rgba(0, 0, 0, 0.2),inset 0px 8px 8px -8px rgba(0, 0, 0, 0.25),inset 0px 4px 4px -4px rgba(0, 0, 0, 0.25),inset 0px 3px 3px -3px rgba(0, 0, 0, 0.25),inset 0px 1px 1px -1px rgba(0, 0, 0, 0.3) !important;
+}
+
+body {
+  padding: 16px;
+  font-family: Inter, -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  background-color: var( --wf-system---gray-1100 );
+}
+
+#prev, #next {
+  width: 24px;
+  height: 24px;
+}
+
+.label {
+  color: rgba(255, 255, 255, 0.67);
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.115px;
+  margin-top: 12px;
+}
+
+.cat-name {
+  margin-top: 4px;
+  width: 100%;
+  /* font-size: 1em; */
+  color: #fff;
+  padding: 5px 8px;
+  min-width: 60px;
+  outline: none;
+  text-align: center;
+  cursor: text;
+  transition: background 0.2s;
+  background-color: var(--wf-system---black-a-22);
+  border-color: var(--wf-system---white-a-16);
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+}
+.cat-name:hover {
+  background: var( --wf-system---gray-800 );
+}
+.cat-name:focus {
+  background: var( --wf-system---gray-900 );
+}
+
+.cat-outer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var( --wf-system---gray-800 );
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.cat-outer-container .button-wrapper:first-child {
+  transform: translateX(-50%);
+}
+
+.cat-outer-container .button-wrapper:last-child {
+  transform: translateX(50%);
+}
+
+.cat-inner-container {
+  padding: 24px;
+  min-height: 168px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat {
+  width: 32px;
+  height: 32px;
+
+  background: url("cats/godot_idle.png") 0 0 no-repeat;
+  image-rendering: pixelated;
+
+  transform: scale(2.5);
+  transform-origin: center;
+
+  /* idle looping */
+  animation: cat-idle 0.9s steps(7) infinite;
+}
+
+.controls {
+  display: flex;
+  margin-top: 4px;
+  gap: 12px;
+}
+
+.button-wrapper {
+  background-color: var( --wf-system---gray-1100 );
+  border-radius: 4px;
+}
+
+.button {
+  border-bottom-color: var(--colors-border-1);
+  border-left-color: var(--colors-border-1);
+  border-right-color: var(--colors-border-1);
+  border-top-color: var(--colors-border-1);
+  outline: 0px;
+  cursor: default;
+  user-select: none;
+  gap: 4px;
+  height: 24px;
+  padding: 0px 4px;
+  font-family: inherit;
+  font-size: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: var(--colors-action-secondary-text);
+  background: var(--colors-action-secondary-background);
+  border-width: 0px;
+  border-style: solid;
+  box-sizing: border-box;
+  box-shadow: var(--box-shadows-action-secondary);
+  align-self: center;
+}
+
+.button:hover {
+  background-color: var( --wf-system---gray-800 );
+}
+/* idle animation */
+@keyframes cat-idle {
+  from { background-position: 0 0; }
+  to   { background-position: -224px 0; } /* 7 frames × 32px */
+}
+
+/* jump state (overrides idle) */
+.cat.jump {
+  background-image: url("cats/godot_jump.png");
+  animation: cat-jump 1s steps(13) forwards; /* 13 frames = 416px / 32px */
+}
+
+/* jump animation */
+@keyframes cat-jump {
+  from { background-position: 0 0; }
+  to   { background-position: -416px 0; }
+}
+
+.cat--godot {
+  background-image: url("cats/godot_idle.png");
+}
+.cat--godot.jump {
+  background-image: url("cats/godot_jump.png");
+}
+
+.cat--batman {
+  background-image: url("cats/batman_idle.png");
+}
+.cat--batman.jump {
+  background-image: url("cats/batman_jump.png");
+}
+
+.cat--black {
+  background-image: url("cats/black_idle.png");
+}
+.cat--black.jump {
+  background-image: url("cats/black_jump.png");
+}
+
+.cat--brown {
+  background-image: url("cats/brown_idle.png");
+}
+.cat--brown.jump {
+  background-image: url("cats/brown_jump.png");
+}
+
+.cat--three {
+  background-image: url("cats/three_idle.png");
+}
+.cat--three.jump {
+  background-image: url("cats/three_jump.png");
+}
+
+.cat--tiger {
+  background-image: url("cats/tiger_idle.png");
+}
+.cat--tiger.jump {
+  background-image: url("cats/tiger_jump.png");
+}
+
+.cat--classic {
+  background-image: url("cats/classic_idle.png");
+}
+.cat--classic.jump {
+  background-image: url("cats/classic_jump.png");
+}
+
+.cat--white {
+  background-image: url("cats/white_idle.png");
+}
+.cat--white.jump {
+  background-image: url("cats/white_jump.png");
+}

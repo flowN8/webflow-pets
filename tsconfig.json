@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "outDir": "public",
+    "target": "es2020",
+    "lib": ["es2020", "dom"],
+    "typeRoots": ["./node_modules/@types", "./node_modules/@webflow"]
+  }
+}

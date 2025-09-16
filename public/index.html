@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="cat-outer-container">
+      <div class="button-wrapper">
+        <button class="button" id="prev" title="Previous">&larr;</button>
+      </div>
+      <div class="cat-inner-container">
+        <div class="cat"></div>
+      </div>
+      <div class="button-wrapper">
+        <button class="button" id="next" title="Next">&rarr;</button>
+      </div>
+    </div>
+
+    <label class="label" for="cat-name">Name</label>
+    <input
+      id="cat-name"
+      type="text"
+      class="cat-name"
+      spellcheck="false"
+      placeholder="Enter your cat's name"
+    />
+
+    <div class="label">Controls</div>
+    <div class="controls">
+      <button class="button" id="jump" title="Jump">Jump</button>
+      <button class="button" id="speak" title="Speak">Meow</button>
+    </div>
+
+    <script src="index.js" defer></script>
+  </body>
+</html>
