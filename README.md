@@ -11,6 +11,23 @@ Pixel cat assets by [ToffeeCraft](https://toffeecraft.itch.io/).
 
 Check out the [documentation](https://developers.webflow.com/designer/reference/introduction) for in-depth information about Designer Extension features and API.
 
+## Features
+
+<table>
+<tr>
+<td>
+<img src="./preview-2.gif" alt="Screenshot of Webflow Pets extension">
+</td>
+<td>
+
+* Select your favourite cat and give them a name.
+* Interact with your talented cat, who can jump and speak!
+* Your cat watches you work, and will react when you select new elements in the designer.
+
+</td>
+</tr>
+</table>
+
 ## Requirements
 
 Ensure your machine has the Webflow CLI available:
